@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_milk"
+    android:padding="16dp">
+
+    <!-- Tombol Back -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Kembali"
+        app:tint="#5DADE2" />
+
+    <!-- Judul Atas -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIMULASI"
+        android:textSize="28sp"
+        android:textColor="#4A148C"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <!-- ScrollView berisi Form -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <!-- Card Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="20dp"
+                android:elevation="6dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Form Input Prediksi"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Input -->
+                <!-- PH -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PH"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <EditText android:id="@+id/et_ph"         style="@style/SimulasiInput" android:hint="pH (float)" />
+
+                <!-- Temperature -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <EditText android:id="@+id/et_temp"       style="@style/SimulasiInput" android:hint="Temperature (°C)" />
+
+                <!-- Taste -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taste"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rg_taste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/taste_0" android:text="0"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                    <RadioButton android:id="@+id/taste_1" android:text="1"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                </RadioGroup>
+
+                <!-- Odor -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Odor"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rg_odor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/odor_0" android:text="0"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                    <RadioButton android:id="@+id/odor_1" android:text="1"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                </RadioGroup>
+
+                <!-- Fat -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fat"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rg_fat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/fat_0" android:text="0"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                    <RadioButton android:id="@+id/fat_1" android:text="1"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                </RadioGroup>
+
+                <!-- Turbidity -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turbidity"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <RadioGroup
+                    android:id="@+id/rg_turbidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton android:id="@+id/turbidity_0" android:text="0"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                    <RadioButton android:id="@+id/turbidity_1" android:text="1"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp" />
+                </RadioGroup>
+
+                <!-- Colour -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colour"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginTop="8dp"/>
+                <EditText android:id="@+id/et_colour"     style="@style/SimulasiInput" android:hint="Colour (240–255)" />
+
+                <!-- Tombol Prediksi -->
+                <Button
+                    android:id="@+id/btn_cek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CEK KUALITAS"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Card Hasil -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="20dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil Prediksi"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#004D66"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil akan muncul di sini"
+                    android:textSize="16sp"
+                    android:textColor="#0D47A1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

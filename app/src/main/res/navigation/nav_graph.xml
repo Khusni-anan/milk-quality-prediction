@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.milk_quality_prediction.ui.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_datasetFragment"
+            app:destination="@id/datasetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_simulasiFragment"
+            app:destination="@id/simulasiFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_modelFragment"
+            app:destination="@id/modelFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_fiturFragment"
+            app:destination="@id/fiturFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/datasetFragment"
+        android:name="com.example.milk_quality_prediction.ui.DatasetFragment"
+        android:label="Dataset" />
+
+    <fragment
+        android:id="@+id/fiturFragment"
+        android:name="com.example.milk_quality_prediction.ui.FiturFragment"
+        android:label="Fitur" />
+
+    <fragment
+        android:id="@+id/modelFragment"
+        android:name="com.example.milk_quality_prediction.ui.ModelFragment"
+        android:label="Model" />
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.milk_quality_prediction.ui.InfoFragment"
+        android:label="Info" />
+
+    <fragment
+        android:id="@+id/simulasiFragment"
+        android:name="com.example.milk_quality_prediction.ui.SimulasiFragment"
+        android:label="Simulasi" />
+</navigation>

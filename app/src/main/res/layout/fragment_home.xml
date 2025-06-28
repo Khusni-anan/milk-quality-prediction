@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_milk"
+    android:padding="24dp">
+
+    <!-- Gambar susu di tengah atas -->
+    <ImageView
+        android:id="@+id/imgMilk"
+        android:layout_width="1000dp"
+        android:layout_height="200dp"
+        android:src="@drawable/milk"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp" />
+
+    <!-- Tombol info di pojok kanan atas -->
+    <ImageButton
+        android:id="@+id/btnInfo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_info"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="#5DADE2"
+        android:contentDescription="Info"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="14dp" />
+
+    <!-- Konten scrollable -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imgMilk"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp">
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kualitas Susu"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kualitas susu merupakan faktor penting dalam menjamin keamanan dan kesegaran produk. Beberapa indikator utama yang memengaruhi mutu susu antara lain pH, suhu, rasa, bau, warna, kadar lemak, dan tingkat kekeruhan.\n\nAplikasi ini dirancang untuk membantu menganalisis data karakteristik susu guna memprediksi tingkat kualitasnya. Dengan memasukkan data hasil pengamatan, pengguna dapat mengetahui apakah kualitas susu tergolong rendah, sedang, atau tinggi."
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Ajak Simulasi -->
+            <TextView
+                android:id="@+id/ajakSimulasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍 Coba simulasi prediksi kualitas susu sekarang!"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0D47A1"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tombol Simulasi -->
+            <Button
+                android:id="@+id/btnSimulasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulasi"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#5DADE2"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_milk"
+    android:padding="16dp">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FITUR DATASET"
+        android:textSize="28sp"
+        android:textColor="#4A148C"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="65dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Fitur Cards -->
+            <include layout="@layout/item_card" android:id="@+id/card_ph" />
+            <include layout="@layout/item_card" android:id="@+id/card_temp" />
+            <include layout="@layout/item_card" android:id="@+id/card_taste" />
+            <include layout="@layout/item_card" android:id="@+id/card_odor" />
+            <include layout="@layout/item_card" android:id="@+id/card_fat" />
+            <include layout="@layout/item_card" android:id="@+id/card_turbidity" />
+            <include layout="@layout/item_card" android:id="@+id/card_colour" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
